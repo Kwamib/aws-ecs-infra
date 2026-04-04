@@ -1,0 +1,38 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform/
+.terraform.lock.hcl
+tfplan
+plan.json
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+errored.tfstate
+
+# Packer
+images/manifest.json
+images/packer.log
+*.log
+
+# Inspector
+inspector-findings.json
+
+# SSH keys
+*.pem
+*.pub
+ses_key*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

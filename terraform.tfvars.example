@@ -1,0 +1,44 @@
+# ==========================================
+# Required Variables — Copy to terraform.tfvars and fill in
+# ==========================================
+
+# AWS IAM role ARN to assume for provisioning
+assume_role_arn = "arn:aws:iam::ACCOUNT_ID:role/YOUR_ROLE"
+
+# Domain name (must have Route 53 hosted zone and wildcard ACM cert)
+domain_name = "example.com"
+
+# SSH key pair name (must exist in your AWS account)
+key_name = "your-key-pair-name"
+
+# ECS-optimized AMI ID
+ami_id = "ami-xxxxxxxxx"
+
+# ECR container image URI
+container_image = "ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/your-repo:tag"
+
+# RDS snapshot to restore from
+snapshot_identifier = "your-db-snapshot-id"
+
+# Email for CloudWatch alarm notifications
+notification_email = "alerts@example.com"
+
+# Resource ownership
+owner_email = "you@example.com"
+
+# ==========================================
+# Optional Overrides
+# ==========================================
+
+# environment       = "Development"
+# project_name      = "clixx"
+# app_subdomain     = "ecs"
+# aws_region        = "us-east-1"
+# instance_type     = "c4.large"
+# db_instance_class = "db.t3.medium"
+# min_capacity      = 1
+# max_capacity      = 3
+# desired_count     = 1
+# trusted_ssh_cidr  = "YOUR_IP/32"
+# cluster_name      = "clixx-cluster"
+# force_deploy      = false
